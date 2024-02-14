@@ -28,7 +28,7 @@ export class Analytics {
         //db call to persist this event
         console.log(key)
         console.log(JSON.stringify(event));
-        await redis.set(key, JSON.stringify(event)).then((res)=>(console.log(res)))
+        await redis.hincrby(key, JSON.stringify(event),1).then((res)=>(console.log(res)))
         if (!opts?.persist) await redis.expire(key, this.retention)
 
     }
