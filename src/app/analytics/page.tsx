@@ -39,7 +39,9 @@ const page = async () => {
       if (!event) continue;
 
       const key = Object.keys(event)[0]!
+      console.log({key})
       const value = Object.values(event)[0]!
+      console.log({value})
 
       const parsedKey = JSON.parse(key)
 
@@ -61,6 +63,8 @@ const page = async () => {
     if(a[1] > b[1]) return -1
     else return 1
   }).slice(0,5)
+
+  console.log({topCountries})
 
 
   return (
