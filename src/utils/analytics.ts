@@ -64,7 +64,7 @@ export class Analytics {
                 return -1;
             }
         })
-
+        console.log(data)
         return data
     }
 

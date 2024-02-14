@@ -1,6 +1,7 @@
 import AnalyticsDashboard from "@/components/AnalyticsDashboard"
 import { analytics } from "@/utils/analytics"
 import { getDate } from '@/utils/index'
+import { CloudHail } from "lucide-react"
 
 const page = async () => {
   const TRACKING_DAYS = 7
@@ -16,6 +17,8 @@ const page = async () => {
       }, 0)
     )
   }, 0)
+
+  console.log(totalPageViews)
 
   const avgVisitorsPerDay = (totalPageViews / TRACKING_DAYS).toFixed(1)
 
