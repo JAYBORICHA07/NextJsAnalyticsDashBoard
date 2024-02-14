@@ -11,6 +11,8 @@ export default async function middleware(req : NextRequest) {
                 country : req.geo?.country
             })
 
+            console.log(req)
+
         } catch (error) {
             //failed silently
             console.error(error)

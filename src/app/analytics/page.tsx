@@ -1,7 +1,6 @@
 import AnalyticsDashboard from "@/components/AnalyticsDashboard"
 import { analytics } from "@/utils/analytics"
 import { getDate } from '@/utils/index'
-import { count } from "console"
 
 const page = async () => {
   const TRACKING_DAYS = 7
